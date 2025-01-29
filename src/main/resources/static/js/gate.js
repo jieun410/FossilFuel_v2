@@ -25,12 +25,11 @@ function addGuestbook() {
             },
             body: JSON.stringify(entry)
         })
-            .then(response => {
-                if (response.ok) {
-                    guestbookEntries.push(entry);
-                    input.value = '';
-                    renderGuestbook();
-                }
+            .then(response => response.json())  // 응답을 JSON으로 변환
+            .then(data => {
+                guestbookEntries.unshift(data); // 새 방명록을 배열의 맨 앞에 추가
+                input.value = '';
+                renderGuestbook(); // 최신 순서로 다시 렌더링
             });
     }
 }
