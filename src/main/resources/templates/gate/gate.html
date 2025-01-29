@@ -71,15 +71,15 @@
 <!-- 네 번째 컨테이너 (방명록) -->
 <section class="guestbook-section">
     <h2>방명록</h2>
-    <div>
+    <div class="guestbook-input-container">
         <textarea id="guestbookInput" placeholder="방명록을 작성하세요..."></textarea>
-        <button onclick="addGuestbook()" class="btn-blue">작성</button>
+        <button onclick="addGuestbook()" class="btn-submit">작성</button>
     </div>
     <div id="guestbookContainer" class="guestbook-container"></div>
     <div class="pagination">
-        <button onclick="prevPage()">이전</button>
+        <button onclick="prevPage()" class="btn-nav">이전</button>
         <span id="pageNumber">1</span>
-        <button onclick="nextPage()">다음</button>
+        <button onclick="nextPage()" class="btn-nav">다음</button>
     </div>
 </section>
 
