@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    반응형 웹 디자인을 위해 화면의 너비를 디바이스 너비에 맞추고, 초기 확대 수준을 1로 설정-->
+    <title>화석연료</title>
+    <link rel="stylesheet" href="/css/gate.css">
+
+</head>
+<body>
+
+<!-- 첫 번째 컨테이너 -->
+<section class="title-section">
+    <h1>컴퓨터소프트웨어학부 학과 동아리</h1>
+    <p>Welcome to our club website!</p>
+    <div>
+        <button class="btn-blue">로그인</button>
+        <button class="btn-gray">회원가입</button>
+    </div>
+</section>
+
+<!-- 활동 다짐 컨테이너 -->
+<section class="study-section">
+    <h2>화석연료</h2>
+    <div class="study-content">
+        <h3>설립 목적</h3>
+        <ul>
+            <li>취업 준비와 졸업을 앞둔 학생들에게 필요한 자격과 동기부여 제공</li>
+            <li>다양한 프로그램에 참여하여 역량 강화</li>
+        </ul>
+
+        <h3>활동 내용</h3>
+        <ul>
+            <li>자소서 & 이력서 관련 특강 참여 및 피드백 진행</li>
+            <li>코딩테스트 연습(하루 1문제 or 주 2문제)</li>
+            <li>모집 공고 공유를 통한 스펙 검토</li>
+            <li>자격증 준비(정보처리기사, 정보보안기사 등)</li>
+            <li>선후배 간 자유로운 멘토링</li>
+            <li>강의 공유 및 자율 공부 환경 마련</li>
+            <li>주 5일 활동(09시~22시까지 자유 참여)</li>
+            <li>프로젝트 기획 및 멘토링</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 두 번째 컨테이너 -->
+<section class="member-section">
+    <h2>Member</h2>
+    <img src="/img/Afossilfuel.jpeg" alt="대표 이미지" class="main-profile">
+    <div class="member-container">
+        <img src="/img/member1.jpeg">
+        <img src="/img/member2.png">
+        <img src="/img/member3.jpeg">
+        <img src="/img/member4.jpeg">
+        <img src="/img/member5.png">
+        <img src="/img/memberRIP.jpeg">
+    </div>
+</section>
+
+<!-- 세 번째 컨테이너 -->
+<section class="memories-section">
+    <h2>Our Memories</h2>
+    <div class="memories-container">
+        <img src="/img/assemble1.jpeg">
+        <img src="/img/assemble2.jpeg">
+        <img src="/img/assemble3.jpeg">
+    </div>
+</section>
+
+<!-- 네 번째 컨테이너 (방명록) -->
+<section class="guestbook-section">
+    <h2>방명록</h2>
+    <div>
+        <textarea id="guestbookInput" placeholder="방명록을 작성하세요..."></textarea>
+        <button onclick="addGuestbook()" class="btn-blue">작성</button>
+    </div>
+    <div id="guestbookContainer" class="guestbook-container"></div>
+    <div class="pagination">
+        <button onclick="prevPage()">이전</button>
+        <span id="pageNumber">1</span>
+        <button onclick="nextPage()">다음</button>
+    </div>
+</section>
+
+<!-- Footer 컨테이너 -->
+<footer class="footer">
+    <p>Copyright ⓒ <a href="https://github.com/adorahelen">https://github.com/adorahelen</a></p>
+    <p>전화 : 053-850-2740 | 팩스 : 053-359-6640 | 문의 : 회장 이지은</p>
+    <p><a href="mailto:easyeun21@cu.ac.kr">easyeun21@cu.ac.kr</a></p>
+    <p>경상북도 경산시 하양읍 하양로 13-13 D2(공학관) 516호</p>
+</footer>
+
+<script src="/js/gate.js"></script>
+
+</body>
+</html>
