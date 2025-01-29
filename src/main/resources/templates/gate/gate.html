@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko">
+<!--카카오 맵 때문에, 타임리프 적용-->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--    반응형 웹 디자인을 위해 화면의 너비를 디바이스 너비에 맞추고, 초기 확대 수준을 1로 설정-->
     <title>화석연료</title>
     <link rel="stylesheet" href="/css/gate.css">
-
 </head>
 <body>
 
@@ -89,8 +90,13 @@
     <p>전화 : 053-850-2740 | 팩스 : 053-359-6640 | 문의 : 회장 이지은</p>
     <p><a href="mailto:easyeun21@cu.ac.kr">easyeun21@cu.ac.kr</a></p>
     <p>경상북도 경산시 하양읍 하양로 13-13 D2(공학관) 516호</p>
+    <div id="map" style="width:100%;height:350px;"></div>
 </footer>
 
+<!-- 자바스크립트 -->
+<script type="text/javascript" th:src="@{'//dapi.kakao.com/v2/maps/sdk.js?appkey=' + ${kakaoApiKey}}">
+</script>
+<script src="/js/kakao.js"></script>
 <script src="/js/gate.js"></script>
 
 </body>
