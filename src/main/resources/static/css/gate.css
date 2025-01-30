@@ -24,20 +24,46 @@ body {
     margin-top: 10px;
 }
 
-.title-section button {
+/* 버튼 스타일 */
+.title-section .btn {
+    display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
+/* 로그인 버튼 */
 .btn-blue {
     background-color: #3b82f6;
     color: white;
 }
 
+.btn-blue:hover {
+    background-color: #2563eb;
+}
+
+/* 회원가입 버튼 */
 .btn-gray {
     background-color: #d1d5db;
+    color: black;
+}
+
+.btn-gray:hover {
+    background-color: #9ca3af;
+}
+
+/* AI 고양이 버튼 */
+.btn-yellow {
+    background-color: #facc15;
+    color: black;
+}
+
+.btn-yellow:hover {
+    background-color: #eab308;
 }
 
 /* 두 번째 컨테이너 (멤버 섹션) */
