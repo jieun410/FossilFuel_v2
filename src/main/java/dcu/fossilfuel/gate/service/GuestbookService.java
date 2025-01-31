@@ -15,9 +15,9 @@ public class GuestbookService {
         this.guestbookRepository = guestbookRepository;
     }
 
-    // 방명록 전체 조회
+    // 방명록 전체 조회 (최신 순)
     public List<Guestbook> getAllGuestbookEntries() {
-        return guestbookRepository.findAll();
+        return guestbookRepository.findAllByOrderByCreatedAtDesc(); // 최신 순으로 반환
     }
 
     // 방명록 추가

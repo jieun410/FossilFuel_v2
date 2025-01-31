@@ -4,7 +4,7 @@ const entriesPerPage = 6;
 
 // 페이지가 로드될 때 초기 데이터 로드
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/api/guestbook')
+    fetch('/api/guestbook/get')
         .then(response => response.json())
         .then(data => {
             guestbookEntries = data;
@@ -18,7 +18,7 @@ function addGuestbook() {
     if (input.value.trim() !== '') {
         const entry = { content: input.value };
 
-        fetch('/api/guestbook', {
+        fetch('/api/guestbook/post', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

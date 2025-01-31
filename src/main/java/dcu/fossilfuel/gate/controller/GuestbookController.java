@@ -18,13 +18,13 @@ public class GuestbookController {
     }
 
     // 방명록 목록 조회 (GET)
-    @GetMapping
+    @GetMapping("/get")
     public List<Guestbook> getAllGuestbookEntries() {
         return guestbookService.getAllGuestbookEntries();
     }
 
     // 방명록 추가 (POST)
-    @PostMapping
+    @PostMapping("/post")
     public Guestbook addGuestbookEntry(@RequestBody Guestbook entry) {
         return guestbookService.addGuestbookEntry(entry.getContent());
     }

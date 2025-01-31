@@ -18,7 +18,7 @@ document.getElementById('chat-form').addEventListener('submit', async (event) =>
 
     // 🎯 서버에 메시지 전송
     try {
-        const response = await fetch('/chat', {
+        const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

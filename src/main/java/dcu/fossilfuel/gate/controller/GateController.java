@@ -24,15 +24,7 @@ public class GateController {
         return "gate/chatbot";
     }
 
-    @GetMapping("/signup")
-    public String signup() {
-        return "user/signup";
-    }
 
-    @GetMapping("/login")
-    public String login() {
-        return "user/login";
-    }
 
 
 

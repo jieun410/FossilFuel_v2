@@ -25,7 +25,7 @@ public class AiController {
     @Value("${OPENAI_API_KEY}")
     private String apiKey;
 
-    @PostMapping("/chat")
+    @PostMapping("/api/chat")
     @ResponseBody
     public ResponseEntity<?> chatWithGPT(@RequestBody AiChatRequest chatRequest) {
         String apiUrl = "https://api.openai.com/v1/chat/completions";
