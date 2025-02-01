@@ -14,6 +14,7 @@ import java.io.IOException;
 @Component
 public class CustomAuthenticationFailureHandler implements AuthenticationFailureHandler {
 
+    // 로그인 에러가 발생하면, 무조건 하단의 메시지를 세션에 저장 후 리다이렉트
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
                                         AuthenticationException exception) throws IOException, ServletException {

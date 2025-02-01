@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/auth")
 public class AuthController {
 
+    // Fail Handler 에서 저장된 메시지를 가지고와서 api 로 쏨 (login.html, js가 받아서 표시함)
     @GetMapping("/error-message")
     public ResponseEntity<String> getErrorMessage(HttpServletRequest request) {
         HttpSession session = request.getSession();
