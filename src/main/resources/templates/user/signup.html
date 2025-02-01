@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+<div class="signup-container">
+    <h2>회원가입</h2>
+
+    <label for="nickname">닉네임</label>
+    <input type="text" id="nickname" placeholder="닉네임 입력">
+
+    <label for="email">이메일</label>
+    <input type="email" id="email" placeholder="이메일 입력">
+    <button id="send-code">인증 코드 받기</button>
+
+    <label for="code">인증 코드</label>
+    <input type="text" id="code" placeholder="인증 코드 입력">
+    <button id="verify-code">인증 코드 확인</button>
+
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" placeholder="비밀번호 입력">
+
+    <label for="confirm-password">비밀번호 확인</label>
+    <input type="password" id="confirm-password" placeholder="비밀번호 확인">
+
+    <label for="grade">학년 선택</label>
+    <select id="grade">
+        <option value="1학년">1학년</option>
+        <option value="2학년">2학년</option>
+        <option value="3학년">3학년</option>
+        <option value="4학년">4학년</option>
+        <option value="졸업생">졸업생</option>
+        <option value="외부인">외부인</option>
+
+
+    </select>
+
+    <button id="signup">회원가입</button>
+</div>
+
+<script src="/js/signup.js"></script>
+</body>
+</html>
