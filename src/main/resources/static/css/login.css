@@ -1,0 +1,66 @@
+/* 전체 화면 스타일 */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #0057b7, #ffd700); /* 파란색 & 노란색 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 로그인 박스 스타일 */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+}
+
+/* 입력 필드 스타일 */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #0057b7;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 입력 필드 포커스 효과 */
+input:focus {
+    border-color: #ffd700;
+    box-shadow: 0px 0px 8px rgba(255, 215, 0, 0.8);
+}
+
+/* 버튼 스타일 */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0057b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 버튼 클릭 애니메이션 */
+button:active {
+    transform: scale(0.95);
+}
+
+/* 로그아웃 버튼 스타일 */
+#logoutButton {
+    margin-top: 10px;
+    background-color: #ffd700;
+    color: black;
+}
+
+/* 숨김 클래스 */
+.hidden {
+    display: none;
+}

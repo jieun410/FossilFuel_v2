@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>로그인</h1>
+
+<!--  폼 로그인이 아닌, JS 를 이용한 JSON 로그인시에도 스프링 시큐리티 커스텀이 요구됨 ( jwt, oauth2 논외)  -->
+    <form action="/api/auth/login" method="post">
+        <input type="email" name="username" placeholder="이메일" required>
+        <input type="password" name="password" placeholder="비밀번호" required>
+        <button type="submit">로그인</button>
+    </form>
+
+    <div id="error-message" style="color: red;"></div>
+
+
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/api/auth/error-message')  // 세션에서 메시지 가져오기
+            .then(response => response.text())
+            .then(message => {
+                if (message) {
+                    document.getElementById("error-message").textContent = message;
+                }
+            });
+    });
+</script>
+</body>
+</html>
