@@ -112,7 +112,7 @@ document.getElementById('signup').addEventListener('click', async function() {
         }
 
         // 서버에서 이메일 인증 여부 확인
-        const emailVerifyResponse = await fetch('/api/auth/email-verified', { method: 'GET' });
+        const emailVerifyResponse = await fetch('/api/email-verified', { method: 'GET' });
 
         if (!emailVerifyResponse.ok) {
             alert("이메일 인증을 먼저 완료해주세요.");
