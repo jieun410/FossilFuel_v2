@@ -42,6 +42,8 @@ document.getElementById('verify-code').addEventListener('click', async function 
 
         if (response.ok) {
             alert("이메일 인증 성공!");
+            // 이메일 인증이 완료되면 이메일 필드를 disabled로 설정
+            document.getElementById('email').disabled = true; // 이메일 필드를 수정 불가능하게 만듦
         } else {
             const errorText = await response.text();
             alert("이메일 인증 실패: " + errorText);
