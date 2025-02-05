@@ -49,6 +49,7 @@ dependencies {
     implementation 'com.zaxxer:HikariCP:5.1.0'  // 커넥션 풀 라이브러리
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'mysql:mysql-connector-java:8.0.29'  // MySQL 드라이버
+    implementation 'com.h2database:h2' //h2 데이터베이스 추가
 
     // [Security]
     implementation 'org.springframework.boot:spring-boot-starter-security'
