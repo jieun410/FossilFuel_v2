@@ -9,6 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 @RequiredArgsConstructor
 public class MemberController {
@@ -72,6 +75,26 @@ public class MemberController {
         memberService.saveMember(registerRequest);  // 회원 저장
         return new ResponseEntity<>(HttpStatus.OK);  // 200 OK만 반환
     }
+
+
+    // [id 찾기 ]
+    // 닉네임을 입력받아, 기존 회원 디비와 대조
+    @PostMapping("/api/auth/find-id")
+    public ResponseEntity<Map<String, Object>> findId(@RequestBody RegisterRequest request) {
+        String email = memberService.findEmailByNickname(request.getNickname());
+
+        Map<String, Object> response = new HashMap<>();
+        if (email == null) {
+            response.put("success", false);
+            response.put("message", "닉네임이 잘못되었거나 회원이 아닙니다.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
+        }
+
+        response.put("success", true);
+        response.put("email", email);
+        return ResponseEntity.ok(response);
+    }
+
 
 
 
