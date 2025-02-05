@@ -14,4 +14,14 @@ public class UserViewController {
     public String login() {
         return "user/login";
     }
+
+    @GetMapping("/login/find-password")
+    public String findPassword() {
+        return "user/find-password";
+    }
+
+    @GetMapping("/login/find-id")
+    public String findId() {
+        return "user/find-id";
+    }
 }

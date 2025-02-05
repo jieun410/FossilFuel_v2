@@ -1,0 +1,6 @@
+@import url('/css/login.css');
+
+#result-message {
+    margin-top: 10px;
+    font-weight: bold;
+}

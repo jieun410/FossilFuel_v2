@@ -64,3 +64,26 @@ button:active {
 .hidden {
     display: none;
 }
+
+/* 아이디 찾기 & 비밀번호 찾기 버튼 스타일 */
+.find-options {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.find-options button {
+    width: 48%;
+    padding: 8px;
+    background-color: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.find-options button:hover {
+    background-color: #e0e0e0;
+}

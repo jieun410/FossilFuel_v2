@@ -32,7 +32,7 @@ public class SecurityConfig {
         http.csrf(csrf -> csrf.disable());
         http.httpBasic(httpBasic -> httpBasic.disable());
         http.authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/", "/signup", "/chatbot", "/api/**", "/error", "/login").permitAll()
+                .requestMatchers("/", "/signup", "/chatbot", "/api/**", "/error", "/login", "/login/**").permitAll()
                 .anyRequest().authenticated()
         );
 
